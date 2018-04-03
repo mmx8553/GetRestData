@@ -15,8 +15,11 @@ public class MainClass {
 
         String token = "513909183:AAGa0kj2rt6TDrYwWoKrc6PscyoI_m195Ko";
         StringBuilder sb = new StringBuilder();
+        String method = "";
+        method = "/getMe";
+        method = "/getUpdates";
 
-        sb.append("https://api.telegram.org/bot").append(token).append("/getMe");
+        sb.append("https://api.telegram.org/bot").append(token).append(method);
         String payload=null;
         String requestUrl= sb.toString();
         System.out.println(sendPostRequest(requestUrl, payload));
